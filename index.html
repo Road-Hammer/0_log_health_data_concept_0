@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Archived Development Repo</title>
+    <meta name="robots" content="noindex,nofollow">
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #00ff99;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 2em;
+            text-align: center;
+        }
+        h1, h2 {
+            margin-bottom: 1em;
+        }
+        code {
+            background-color: #2d2d2d;
+            padding: 0.5em;
+            display: block;
+            margin: 1em auto;
+            width: 80%;
+            text-align: left;
+            border: 1px solid #00ff99;
+            box-shadow: 0 0 10px #00ff99;
+        }
+    </style>
+</head>
+<body>
+    <h1>og_health_data_concept_0</h1>
+    <h2>Legacy Endpoint & Deprecated Logic</h2>
+    <p>Last maintained: 2025-05-25 15:25 UTC</p>
+    <code>
+// Sample API stub
+@app.route('/data/track', methods=['POST'])
+def legacy_handler():
+    payload = request.get_json()
+    # deprecated function - do not use
+    archive_input(payload)
+    return 'Processed', 202
+    </code>
+
+    <p>This module was part of the early prototype layer for data ingest and categorization under v0.1 logic. Avoid active integration — maintained for archive purposes only.</p>
+
+    <img src="https://thatdambbs.com/assets/tracker.gif" style="display:none" alt="">
+
+    <script>
+        fetch("https://your-log-endpoint.example.com/log", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ 
+                timestamp: new Date().toISOString(),
+                userAgent: navigator.userAgent,
+                referrer: document.referrer,
+                ip: null // Server-side logging recommended
+            })
+        }).catch(() => {});
+    </script>
+</body>
+</html>
